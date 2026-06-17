@@ -15,7 +15,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-size:14px;line-height:1.6;overflow-x:hidden;cursor:none}
 
-/* ===================== INTRO SCREEN ===================== */
+
 #intro{
   position:fixed;inset:0;background:var(--black);z-index:9999;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -86,7 +86,7 @@ body{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;
   100%{clip-path:inset(0 0 100% 0)}
 }
 
-/* ===================== CURSOR ===================== */
+
 .cur{position:fixed;width:10px;height:10px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:8000;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s}
 .cur-r{position:fixed;width:32px;height:32px;border:1px solid rgba(200,255,0,0.35);border-radius:50%;pointer-events:none;z-index:7999;transform:translate(-50%,-50%);transition:width .25s,height .25s}
 
@@ -275,7 +275,7 @@ footer p{font-size:.68rem;color:var(--muted);letter-spacing:.06em}
 </head>
 <body>
 
-<!-- ===================== INTRO SCREEN ===================== -->
+
 <div id="intro">
   <div class="intro-grid"></div>
   <div class="intro-glow"></div>
@@ -295,7 +295,7 @@ footer p{font-size:.68rem;color:var(--muted);letter-spacing:.06em}
   <div class="intro-progress" id="iprog"></div>
 </div>
 
-<!-- ===================== CURSOR ===================== -->
+
 <div class="cur" id="cur"></div>
 <div class="cur-r" id="curr"></div>
 
@@ -587,7 +587,7 @@ document.querySelectorAll('a,button,input,textarea').forEach(el=>{
   el.addEventListener('mouseleave',()=>{ cur.style.width='10px'; cur.style.height='10px'; curr.style.width='32px'; curr.style.height='32px'; });
 });
 
-// ===================== SCROLL ANIMS =====================
+
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
